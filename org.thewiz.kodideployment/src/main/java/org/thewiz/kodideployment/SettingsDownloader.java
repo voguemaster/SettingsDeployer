@@ -57,7 +57,6 @@ public class SettingsDownloader extends AsyncTask<String, Integer, Boolean>
         String filename = downloadFile(strParams[0]);
         if (filename != null)
         {
-            result = Boolean.TRUE;
             File fSettingsZip = new File(filename);
             if (fSettingsZip.exists() && !isCancelled())
             {
