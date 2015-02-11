@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#ff000000">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/the_wiz"
+        android:id="@+id/title_text"
+        android:layout_alignWithParentIfMissing="false"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:textColor="#ffb3d9ff"
+        android:textColorHighlight="#ffffffff"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="false"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/kodi_deploy"
+        android:id="@+id/deploy"
+        android:textColor="#ff78d5ff"
+        android:textSize="30sp"
+        android:textColorHighlight="#ffffffff"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/title_text"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/found_text"
+        android:layout_marginTop="67dp"
+        android:layout_below="@+id/deploy"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ff77ff79"
+        android:textColorHighlight="#ffffffff"
+        android:textSize="25sp"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false" />
+
+    <ProgressBar
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/work_prog"
+        android:layout_above="@+id/result_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="46dp"
+        android:indeterminate="false"
+        android:progress="0"
+        android:max="100"
+        android:theme="@android:style/Widget.ProgressBar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/result_text"
+        android:textColor="#ff77ff79"
+        android:textColorHighlight="#ffffffff"
+        android:textSize="20sp"
+        android:layout_marginBottom="73dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/found_text"
+        android:layout_alignStart="@+id/found_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/work_type"
+        android:layout_above="@+id/work_prog"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp"
+        android:textColor="#ffffffff"
+        android:textColorHighlight="#ffffffff"
+        android:textSize="20sp" />
+
+</RelativeLayout>

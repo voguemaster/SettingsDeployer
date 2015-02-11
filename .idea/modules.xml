@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/KodiDeployment.iml" filepath="$PROJECT_DIR$/KodiDeployment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.thewiz.kodideployment/org.thewiz.kodideployment.iml" filepath="$PROJECT_DIR$/org.thewiz.kodideployment/org.thewiz.kodideployment.iml" />
+    </modules>
+  </component>
+</project>
+
