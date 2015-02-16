@@ -5,6 +5,19 @@ This is a simple android application that, when run, fetches a ZIP archive from 
 downloads it and extracts it to the proper location of the master profile of XBMC/Kodi in internal storage.
 For this, XBMC/Kodi is first detected by the code and the profile directory detected.
 
+Permissions:
+
+Read/Write external storage - Used to save the zip package to internal storage, to detect Kodi/XBMC profile dirs and extract the package.
+Full internet access - To download the package set in the urls.xml.
+Prevent the device from sleeping - During download/extract the device shouldn't turn off the CPU otherwise we're toast.
+
+
+Version 1.2:
+
+* Now using a wakelock to keep the device awake during the download and extraction work. The wakelock is release when
+  the work finishes, an error occurs, the user cancels or 4 minutes have passed. If the device can't download and extract the package
+  in 4 minutes of time something is awry.
+
 Initial version 1.1:
 
 * Detect XBMC/Kodi via internal storage created dirs or by querying the PackageManager.
