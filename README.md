@@ -26,7 +26,7 @@ Initial version 1.1:
 * Automatically extract.
 * Log all operations and cleanup stuff when done.
 * Do stuff in the background and report progress. When exiting via the Back key, all operations are cancelled, currently.
-* No wakelocks - if the screen turns off it might ruin everything. Wakelocks will be present in future versions.
+  Keeps the device awake during download and extract.
 
 Currently tailored to be used by TheWiz to deploy his Kodi package but can be forked and used by anyone.
 MIT licence - just add the licence to whatever you do with this code.
