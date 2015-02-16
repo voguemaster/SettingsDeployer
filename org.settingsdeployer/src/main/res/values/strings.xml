@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="title_text">Kodi Deployment</string>
+    <string name="title_text">Settings Deployment for Kodi</string>
     <string name="action_settings">Settings</string>
     <string name="app_name">Kodi TheWiz Pack</string>
     <string name="the_wiz">TheWiz</string>
-    <string name="kodi_deploy">XBMC/Kodi Deployment</string>
+    <string name="kodi_deploy">Settings Deployer for Kodi</string>
     <string name="found_xbmc">Found XBMC!</string>
     <string name="found_kodi">Found Kodi!</string>
     <string name="found_nothing">Could not locate XBMC/Kodi</string>
