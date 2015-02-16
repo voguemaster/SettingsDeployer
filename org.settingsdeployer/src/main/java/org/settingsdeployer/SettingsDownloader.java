@@ -1,9 +1,7 @@
-package org.thewiz.kodideployment;
+package org.settingsdeployer;
 
 import android.content.Context;
-import android.media.audiofx.BassBoost;
 import android.os.AsyncTask;
-import android.os.DropBoxManager;
 import android.util.Log;
 
 import java.io.BufferedOutputStream;

@@ -1,4 +1,4 @@
-package org.thewiz.kodideployment;
+package org.settingsdeployer;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
