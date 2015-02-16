@@ -1,4 +1,4 @@
-# KodiDeployment
+# SettingsDeployer for Kodi
 A tool to automate download and deployment of settings/addons/repos for XBMC/Kodi on Android.
 
 This is a simple android application that, when run, fetches a ZIP archive from a predefined URL (or set of URLs),
