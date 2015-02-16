@@ -7,14 +7,14 @@ For this, XBMC/Kodi is first detected by the code and the profile directory dete
 
 Permissions:
 
-Read/Write external storage - Used to save the zip package to internal storage, to detect Kodi/XBMC profile dirs and extract the package.
-Full internet access - To download the package set in the urls.xml.
-Prevent the device from sleeping - During download/extract the device shouldn't turn off the CPU otherwise we're toast.
+1. Read/Write external storage - Used to save the zip package to internal storage, to detect Kodi/XBMC profile dirs and extract.
+2. Full internet access - To download the package set in the urls.xml.
+3. Prevent the device from sleeping - During download/extract the device shouldn't turn off the CPU otherwise we're toast.
 
 
 Version 1.2:
 
-* Now using a wakelock to keep the device awake during the download and extraction work. The wakelock is release when
+* Now using a wakelock to keep the device awake during the download and extraction work. The wakelock is released when
   the work finishes, an error occurs, the user cancels or 4 minutes have passed. If the device can't download and extract the package
   in 4 minutes of time something is awry.
 
