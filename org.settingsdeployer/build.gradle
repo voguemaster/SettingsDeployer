@@ -8,8 +8,8 @@ android {
         applicationId "org.settingsdeployer"
         minSdkVersion 15
         targetSdkVersion 21
-        versionCode 2
-        versionName "1.1"
+        versionCode 4
+        versionName "1.2"
     }
     buildTypes {
         release {
@@ -21,14 +21,14 @@ android {
     productFlavors {
         normal {
             applicationId "org.settingsdeployer"
-            versionCode 2
-            versionName "1.1"
+            versionCode 4
+            versionName "1.2"
         }
 
         french {
             applicationId "org.settingsdeployer"
-            versionCode 3
-            versionName "1.1_fr"
+            versionCode 5
+            versionName "1.2_fr"
         }
     }
 }

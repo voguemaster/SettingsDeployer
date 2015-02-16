@@ -2,6 +2,8 @@ package org.settingsdeployer;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.os.PowerManager;
+import android.os.PowerManager.WakeLock;
 import android.util.Log;
 
 import java.io.BufferedOutputStream;
@@ -29,6 +31,9 @@ public class SettingsDownloader extends AsyncTask<String, Integer, Boolean>
     public final static int PROGRESS_DOWNLOAD = 1;
     public final static int PROGRESS_EXTRACT = 2;
 
+    // maximum wakelock time in ms
+    public final static int FOUR_MINUTES = 4 * 60 * 1000;
+
     /// our context
     Context m_ctx;
 
@@ -50,6 +55,12 @@ public class SettingsDownloader extends AsyncTask<String, Integer, Boolean>
     protected Boolean doInBackground(String... strParams)
     {
         Boolean result = Boolean.FALSE;
+
+        // get a wakelock to hold for the duration of the background work. downloading
+        // may be slow. extraction usually isn't too slow but also takes a bit of time. limit the wakelock's time!
+        PowerManager powerManager = (PowerManager)m_ctx.getSystemService(Context.POWER_SERVICE);
+        WakeLock wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "SettingsDownloaderWakeLock");
+        wakeLock.acquire(FOUR_MINUTES);
 
         // download the file
         String filename = downloadFile(strParams[0]);
@@ -77,6 +88,12 @@ public class SettingsDownloader extends AsyncTask<String, Integer, Boolean>
                     Log.e("SettingsDownloader", "Error: "+e.toString());
                 }
             }
+        }
+
+        // if our max time hasn't passed but work is done or an error occurred we bail out and release
+        if (wakeLock.isHeld())
+        {
+            wakeLock.release();
         }
 
         return result;
