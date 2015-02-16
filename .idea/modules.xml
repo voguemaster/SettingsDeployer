@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/KodiDeployment.iml" filepath="$PROJECT_DIR$/KodiDeployment.iml" />
       <module fileurl="file://$PROJECT_DIR$/SettingsDeployer.iml" filepath="$PROJECT_DIR$/SettingsDeployer.iml" />
       <module fileurl="file://$PROJECT_DIR$/org.settingsdeployer/org.settingsdeployer.iml" filepath="$PROJECT_DIR$/org.settingsdeployer/org.settingsdeployer.iml" />
     </modules>

@@ -2,13 +2,11 @@ package org.settingsdeployer;
 
 import android.app.Activity;
 import android.graphics.Color;
-import android.media.audiofx.BassBoost;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
